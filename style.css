@@ -1,0 +1,1111 @@
+/*------- the star symbol applies attributes to the whole site -------*/
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+    box-sizing: border-box;
+}
+
+/*------- top of the page photo with low opacity color overlay -------*/
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: 
+    linear-gradient(rgba(51, 63, 114, 0.7),rgba(51, 63, 114, 0.7)),
+    url(images/crete.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+/*------- navigation menu -------*/
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: rgb(83, 134, 209);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+/*------- logo on top of the page -------*/
+
+nav img{
+    width: 100px;
+    height: 100px;
+}
+
+/*------- text on top of main image -------*/
+
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 62px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 16px;
+    color: #fff;
+}
+
+/*------- heading -------*/
+
+.heading{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.heading h1{
+    margin-top: 30px;
+    font-size: 35px;
+    color: rgb(8, 52, 113);
+    margin-bottom: 30px;
+}
+.heading h2{
+    margin-top: 30px;
+    font-size: 25px;
+    color: rgb(8, 52, 113);
+    margin-bottom: 30px;
+}
+.heading p{
+    color: rgb(24, 70, 135);
+}
+
+/*------- video -------*/
+
+.video{
+    margin-top: 60px;
+    text-align: center;
+}
+
+/*------- photos with shadow and pop-up text -------*/
+
+.cont{
+    width:90%;
+    padding: 20px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.box{
+    width: 550px;
+    margin: 0 10px;
+    box-shadow: 0 0 20px 2px rgb(108, 121, 179);
+    transition: .5s;
+    border-radius: 10px;
+}
+img{
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+}
+.box:hover{
+    transform: scale(1.1);
+    z-index: 3;
+}
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer:hover h3{
+    bottom: 60%;
+    opacity: 1;
+    background: rgba(51, 63, 114, 0.7);
+}
+.layer p{
+    width: 100%;
+    font-weight: 300;
+    color: #fff;
+    font-size: 16px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer:hover p{
+    bottom: 30%;
+    opacity: 1;
+    background: rgba(51, 63, 114, 0.7);
+}
+
+/*------- button that leads to the top of the page -------*/
+
+.btn{
+    background: rgb(8, 52, 113);
+    width: 240px;
+    padding: 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    -webkit-text-fill-color: #fff;
+    transition-duration: 0.3s;
+    font-size: 15px;
+    font-weight: bold;
+}
+.btn:hover, .btn:focus, .btn:active{
+    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.top{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    transition: 0.5s;
+}
+.top a{
+    background-color: rgb(8, 52, 113);
+    background: rgb(8, 52, 113);
+    width: 240px;
+    padding: 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    -webkit-text-fill-color: #fff;
+    transition-duration: 0.3s;
+    font-size: 15px;
+    font-weight: bold;
+}
+.top:hover, .top:focus, .top:active{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+/*------- footer -------*/
+
+footer{
+    height: 100px;
+    width: 98.9vw;
+    padding-top: 20px;
+    background: rgb(8, 52, 113);
+    color: #fff;
+    text-align: center;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.footer-content h3{
+    font-size:  1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+    margin-top: 20px;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+.footer-content h4{
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+    margin-bottom: 20px;
+}    
+
+/*------- diamonh.html -------*/
+
+/*------- sub-header's purpose is to be able to use 
+another image on the top of the page with the low opacity 
+color overlay instead of the one used in the main page -------*/
+
+.sub-header2{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(51, 63, 114, 0.7),rgba(51, 63, 114, 0.7)),url(images/diamonh.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+
+/*------- picture next to text -------*/
+
+.section{
+    justify-content: space-between;
+    display: flex;
+    padding: 40px;
+    width: 80%;
+    margin-left: 155px;
+}
+.section h2{
+    margin-top: 30px;
+    font-size: 25px;
+    color: rgb(8, 52, 113);
+    margin-bottom: 30px;
+    margin: 0;
+}
+.section img{
+    height: 250px;
+    width: 350px;
+    margin-left: 20px;
+    box-shadow: 0 0 20px 2px rgb(108, 121, 179);
+}
+.section p{
+    color: rgb(24, 70, 135);
+}
+.text h3{
+    padding: 20px;
+    color: rgb(8, 52, 113);
+    text-align: center;
+    font-size: 25px;
+}
+
+/*------- image carousel -------*/
+
+.carousel{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slider{
+    position: relative;
+    width: 39.5%;
+    overflow: hidden;
+}
+.images{
+    display: flex;
+    width: 100%;
+}
+.images img{
+    height: 400px;
+    width: 100%;
+    transition: all .5s ease;
+    border-radius: 10px;
+}
+.images input{
+    display: none;
+}
+.dots{
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+.dots label{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: solid rgb(51, 63, 114) 3px;
+    cursor: pointer;
+    transition: all in 0.15 ease;
+    margin: 10px;
+    margin-bottom: 30px;
+}
+.dots label:hover {
+    background: rgb(51, 63, 114);
+    transition: 0.5s;
+}
+
+#img1:checked ~ .m1{
+    margin-left: 0;
+}
+#img2:checked ~ .m2{
+    margin-left: -100%;
+    transition: .5s;
+}
+#img3:checked ~ .m3{
+    margin-left: -200%;
+    transition: .5s;
+}
+#img4:checked ~ .m4{
+    margin-left: -300%;
+    transition: .5s;
+}
+#img5:checked ~ .m5{
+    margin-left: -400%;
+    transition: .5s;
+}
+#img6:checked ~ .m6{
+    margin-left: -500%;
+    transition: .5s;
+}
+#img7:checked ~ .m7{
+    margin-left: -600%;
+    transition: .5s;
+}
+#img8:checked ~ .m8{
+    margin-left: -700%;
+    transition: .5s;
+}
+#img9:checked ~ .m9{
+    margin-left: -800%;
+    transition: .5s;
+}
+#img10:checked ~ .m10{
+    margin-left: -900%;
+    transition: .5s;
+}
+
+#imgr1:checked ~ .m1{
+    margin-left: 0;
+}
+#imgr2:checked ~ .m2{
+    margin-left: -100%;
+    transition: .5s;
+}
+#imgr3:checked ~ .m3{
+    margin-left: -200%;
+    transition: .5s;
+}
+#imgr4:checked ~ .m4{
+    margin-left: -300%;
+    transition: .5s;
+}
+#imgr5:checked ~ .m5{
+    margin-left: -400%;
+    transition: .5s;
+}
+#imgr6:checked ~ .m6{
+    margin-left: -500%;
+    transition: .5s;
+}
+#imgr7:checked ~ .m7{
+    margin-left: -600%;
+    transition: .5s;
+}
+#imgr8:checked ~ .m8{
+    margin-left: -700%;
+    transition: .5s;
+}
+#imgr9:checked ~ .m9{
+    margin-left: -800%;
+    transition: .5s;
+}
+#imgr10:checked ~ .m10{
+    margin-left: -900%;
+    transition: .5s;
+}
+
+#imgo1:checked ~ .m1{
+    margin-left: 0;
+}
+#imgo2:checked ~ .m2{
+    margin-left: -100%;
+    transition: .5s;
+}
+#imgo3:checked ~ .m3{
+    margin-left: -200%;
+    transition: .5s;
+}
+#imgo4:checked ~ .m4{
+    margin-left: -300%;
+    transition: .5s;
+}
+#imgo5:checked ~ .m5{
+    margin-left: -400%;
+    transition: .5s;
+}
+#imgo6:checked ~ .m6{
+    margin-left: -500%;
+    transition: .5s;
+}
+#imgo7:checked ~ .m7{
+    margin-left: -600%;
+    transition: .5s;
+}
+#imgo8:checked ~ .m8{
+    margin-left: -700%;
+    transition: .5s;
+}
+#imgo9:checked ~ .m9{
+    margin-left: -800%;
+    transition: .5s;
+}
+#imgo10:checked ~ .m10{
+    margin-left: -900%;
+    transition: .5s;
+}
+
+#imgm1:checked ~ .m1{
+    margin-left: 0;
+}
+#imgm2:checked ~ .m2{
+    margin-left: -100%;
+    transition: .5s;
+}
+#imgm3:checked ~ .m3{
+    margin-left: -200%;
+    transition: .5s;
+}
+#imgm4:checked ~ .m4{
+    margin-left: -300%;
+    transition: .5s;
+}
+#imgm5:checked ~ .m5{
+    margin-left: -400%;
+    transition: .5s;
+}
+#imgm6:checked ~ .m6{
+    margin-left: -500%;
+    transition: .5s;
+}
+#imgm7:checked ~ .m7{
+    margin-left: -600%;
+    transition: .5s;
+}
+#imgm8:checked ~ .m8{
+    margin-left: -700%;
+    transition: .5s;
+}
+#imgm9:checked ~ .m9{
+    margin-left: -800%;
+    transition: .5s;
+}
+#imgm10:checked ~ .m10{
+    margin-left: -900%;
+    transition: .5s;
+}
+
+/*------- faghto.html -------*/
+
+/*------- sub-header's purpose is to be able to use 
+another image on the top of the page with the low opacity 
+color overlay instead of the one used in the main page -------*/
+
+.sub-header3{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(51, 63, 114, 0.7),rgba(51, 63, 114, 0.7)),url(images/faghto.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+.side-bar{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 20px;
+}
+.nomos{
+    margin-top: 30px;
+    font-size: 35px;
+    color: rgb(8, 52, 113);
+    height: 70px;
+    border-bottom: 3px solid rgb(8, 52, 113);
+    justify-self: center;
+}
+.side-bar h2{
+    margin-top: 30px;
+    font-size: 30px;
+    color: rgb(8, 52, 113);
+    margin-bottom: 30px;
+}
+.side-bar p{
+    color: rgb(24, 70, 135);
+}
+.background{
+    background-color: aliceblue;
+}
+
+/*------- borderline -------*/
+
+fieldset{
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+    background-color: rgb(215, 230, 243);
+}
+
+
+/*------- for headings -------*/
+
+.txt{
+    align-self: center;
+    padding-top: 20px;
+}
+.estiatorio{
+    padding: 100px;
+    height: 750px;
+    background-color: rgb(215, 230, 243);
+}
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+/*------- restaurant photos, address and ratings -------*/
+
+.container{
+	position:static;
+}
+.container .card{
+	position: relative;
+	width: 320px;
+	height: 440px;
+	background: rgb(197, 217, 234);
+	border-radius: 20px;
+	overflow: hidden;
+}
+.container .card:hover:before{
+	clip-path: circle(300px at 20% -20%);
+}
+.container .card .imgbox{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 10000;
+	width: 100%;
+	height: 120px;
+	transition: 1s;
+}
+
+
+.container .card:hover .imgbox{
+	top: 20%;
+	transform: translateY(0%);
+}
+.container .card .imgbox img{
+	position: absolute;
+	top: 55%;
+	left: 0%;
+	transform: translate(-10%,-65%) ;
+	width: 520px;
+    height: 370px;
+}
+.container .card .contentbox{
+	position: absolute;
+	bottom: 10px;
+	width: 100%;
+	height: 50px;
+	text-align: justify;
+	transition: 1s;
+	z-index: 10;
+    color: rgb(8, 52, 113);
+}
+
+.container .card:hover .contentbox h3{
+    visibility: hidden;
+    transition: 1s;
+    opacity: 0;
+}
+
+.container .card:hover .contentbox{
+	height: 150px;
+}	
+.container .card .contentbox h2{
+	position: relative;
+	font-weight: 600;
+	letter-spacing: 1px;
+}
+.container .card .contentbox .size, .container .card .contentbox .color{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 15px 20px;
+	transition: 1s;
+	opacity: 0;
+	visibility: hidden;
+}
+.container .card:hover .contentbox .size{
+	opacity: 1;
+	visibility: visible;
+	transition-delay: 0.5s;
+}
+.container .card:hover .contentbox .color{
+	opacity: 1;
+	visibility: visible;
+	transition-delay: 0.7s;
+}
+.container .card .contentbox .size h3, .container .card .contentbox .color h3{
+	font-weight: 300;
+	font-size: 14px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-right: 10px;
+}
+.container .card .contentbox .size span{
+	width: 260px;
+	height: 26px;
+	text-align: center;
+	line-height: 26px;
+	font-size: 14px;
+	display: inline-block;
+	background: #fff;
+	margin: 0 5px;
+	transition: 0.5s;
+	border-radius: 4px;
+	cursor: pointer;
+}
+.container .card .contentbox .size span:hover{
+	background: #1F3E81;
+	color: #fff;
+}
+.container .card .contentbox .color span {
+	width: 20px;
+	height: 20px;
+	background: rgb(42, 145, 241);
+	border-radius: 50%;
+	margin: 0 5px;	
+}
+.container .card .contentbox .color span:nth-child(2){
+	background: rgb(42, 145, 241);
+}
+.container .card .contentbox .color span:nth-child(3){
+	background: rgb(42, 145, 241);
+}
+.container .card .contentbox .color span:nth-child(4){
+	background: rgb(42, 145, 241);
+}
+#ccc span:nth-child(5){
+	background: white;
+}
+.container .card .contentbox a{
+	display: inline-block;
+	padding: 10px 20px;
+	background: #fff;
+	border-radius: 4px;
+	margin-top: 10px;
+	text-decoration: none;
+	font-weight: 600;
+	opacity: 0;
+	transform: translateY(50px);
+	transition: 1s;
+}
+.container .card:hover .contentbox a{
+	opacity: 1;
+	transform: translateY(0px);
+	transition-delay: 0.75s;
+}
+.container .card .contentbox a:hover{
+	background: #1F3E81;
+	transition: 1s;
+	color: #fff;
+}
+.float-container{
+    padding: 25px;
+}
+.float-child {
+    width: 50%;
+    float: left;
+    padding: 10px;
+    text-align: justify;  
+}
+
+/*------- sights.html and trips.html -------*/
+
+/*------- sub-header's purpose is to be able to use 
+another image on the top of the page with the low opacity 
+color overlay instead of the one used in the main page -------*/
+
+/*------- sub-header for ajiotheata.html -------*/
+
+.sub-header4{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(51, 63, 114, 0.7),rgba(51, 63, 114, 0.7)),url(images/knoz.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+
+/*------- sub-header for ekdromes.html -------*/
+
+.sub-header5{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(51, 63, 114, 0.7),rgba(51, 63, 114, 0.7)),url(images/explore.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+
+.merh{
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    padding-top: 70px;
+    border-bottom: 3px solid rgb(8, 52, 113);
+}
+.merh h1{
+    margin-top: 30px;
+    font-size: 35px;
+    color: rgb(8, 52, 113);
+    margin-bottom: 10px;
+}
+.section1{
+    display: flex;
+    justify-content: space;
+    padding: 10px;
+    width: 70%;
+    margin: 10rem auto 0 auto;
+    margin-top: 10px;
+    text-align: justify;
+}
+.text{
+    padding: 20px;
+    color: rgb(24, 70, 135);
+}
+.section1 img{
+    height: 350px;
+    padding: 0px;
+    box-shadow: 0 0 20px 2px rgb(108, 121, 179);
+    transition: .5s;
+    border-radius: 10px;
+}
+.section1 img:hover {
+    transform:scale(1.1);
+    z-index:3;
+}
+.side-bar2{
+    background-color: aliceblue;
+}
+.link-in{
+    background-color: rgb(181, 215, 244);
+    display: flex;
+    justify-content: space;
+    padding: 10px;
+    width: 70%;
+    padding-top: 10px;
+    margin: 10rem auto 0 auto;
+    margin-top: 10px;
+}
+
+/*------- metakinhsh.html -------*/
+
+/*------- sub-header's purpose is to be able to use 
+another image on the top of the page with the low opacity 
+color overlay instead of the one used in the main page -------*/
+
+.sub-header6{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(51, 63, 114, 0.7),rgba(51, 63, 114, 0.7)),url(images/rv-beach.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+.float-container2 {
+    border: 3px solid #fff;
+    padding: 20px;
+}
+.float-child {
+    width: 50%;
+    float: left;
+    padding: 20px;
+    max-height: 380px;
+}  
+.section2{
+    justify-content: space-between;
+    display: flex;
+    padding: 40px;
+    width: 80%;
+    margin-left: 155px;
+}
+.section2 h2{
+    margin-top: 30px;
+    font-size: 25px;
+    color: rgb(8, 52, 113);
+    margin-bottom: 30px;
+    margin: 0;
+}
+.section2 li{
+    color: rgb(24, 70, 135);
+    font-size: 20px;
+    font-weight: 500;
+}
+.slider2{
+    position: relative;
+    width: 75%;
+    overflow: hidden;
+}
+.bb{
+    font-size: x-large;
+}
+.images-met{
+    display: flex;
+    width: 100%;
+}
+.images-met img{
+    height: 250px;
+    width: 100%;
+    transition: all .5s ease;
+    border-radius: 10px;
+}
+.images-met input{
+    display: none;
+}
+#imgq1:checked ~ .m1{
+    margin-left: 0;
+}
+#imgq2:checked ~ .m2{
+    margin-left: -100%;
+    transition: .5s;
+}
+#imgq3:checked ~ .m3{
+    margin-left: -200%;
+    transition: .5s;
+}
+#imga1:checked ~ .m1{
+    margin-left: 0;
+}
+#imga2:checked ~ .m2{
+    margin-left: -100%;
+    transition: .5s;
+}
+#imga3:checked ~ .m3{
+    margin-left: -200%;
+    transition: .5s;
+}
+.float-container2{
+    border: 3px solid aliceblue;
+    padding: 20px;
+}
+.float-child {
+    width: 50%;
+    float: left;
+    padding: 20px;
+    max-height: 380px;
+}  
+.section2{
+    justify-content: space-between;
+    display: flex;
+    padding: 40px;
+    width: 80%;
+    margin-left: 155px;
+}
+.section2 h2{
+    margin-top: 30px;
+    font-size: 25px;
+    color: rgb(8, 52, 113);
+    margin-bottom: 30px;
+    margin: 0;
+}
+.section2 p{
+    color: rgb(24, 70, 135);
+}
+.slider2{
+    position: relative;
+    width: 75%;
+    overflow: hidden;
+}
+.bb{
+    font-size: x-large;
+}
+#imgq1:checked ~ .m1{
+    margin-left: 0;
+}
+#imgq2:checked ~ .m2{
+    margin-left: -100%;
+    transition: .5s;
+}
+#imgq3:checked ~ .m3{
+    margin-left: -200%;
+    transition: .5s;
+}
+#imga1:checked ~ .m1{
+    margin-left: 0;
+}
+#imga2:checked ~ .m2{
+    margin-left: -100%;
+    transition: .5s;
+}
+#imga3:checked ~ .m3{
+    margin-left: -200%;
+    transition: .5s;
+}
+#imgrr1:checked ~ .m1{
+    margin-left: 0;
+}
+#imgrr2:checked ~ .m2{
+    margin-left: -100%;
+    transition: .5s;
+}
+#imgrr3:checked ~ .m3{
+    margin-left: -200%;
+    transition: .5s;
+}
+#imgcc1:checked ~ .m1{
+    margin-left: 0;
+}
+#imgcc2:checked ~ .m2{
+    margin-left: -100%;
+    transition: .5s;
+}
+#imgcc3:checked ~ .m3{
+    margin-left: -200%;
+    transition: .5s;
+}
+#imgaa1:checked ~ .m1{
+    margin-left: 0;
+}
+#imgaa2:checked ~ .m2{
+    margin-left: -100%;
+    transition: .5s;
+}
+#imgaa3:checked ~ .m3{
+    margin-left: -200%;
+    transition: .5s;
+}
+#imgb1:checked ~ .m1{
+    margin-left: 0;
+}
+#imgb2:checked ~ .m2{
+    margin-left: -100%;
+    transition: .5s;
+}
+#imgb3:checked ~ .m3{
+    margin-left: -200%;
+    transition: .5s;
+}
+#imgqe1:checked ~ .m1{
+    margin-left: 0;
+}
+#imgqe2:checked ~ .m2{
+    margin-left: -100%;
+    transition: .5s;
+}
+#imgqe3:checked ~ .m3{
+    margin-left: -200%;
+    transition: .5s;
+}
+
+/*------- synergates.html -------*/
+
+/*------- sub-header's purpose is to be able to use 
+another image on the top of the page with the low opacity 
+color overlay instead of the one used in the main page -------*/
+
+.sub-header7{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(51, 63, 114, 0.7),rgba(51, 63, 114, 0.7)),url(images/partnership.png);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+
+/*------- table with logos -------*/
+
+table, th, td{
+    width: 800px;
+    border: solid 10px aliceblue;
+    border-collapse: collapse;
+    padding: 3px 4px;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.table img{
+    padding: 0px;
+    transition: .5s;
+    border-radius: 10px;
+}
+.table img:hover {
+    transform:scale(1.1);
+    z-index:3;
+}
+
+/*------- epikoinwnia.html -------*/
+
+/*------- sub-header's purpose is to be able to use 
+another image on the top of the page with the low opacity 
+color overlay instead of the one used in the main page -------*/
+
+.sub-header8{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(51, 63, 114, 0.7),rgba(51, 63, 114, 0.7)),url(images/photocontact.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+.content-table{
+    border-collapse: collapse;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;   
+}
+.content-table thead tr{
+    background-color: rgb(51, 63, 114);
+    color:#fff;
+    text-align: center;
+    font-weight: bold;
+}
+.content-table th, .content-table td{
+    padding: 12px 15px;
+}
+.content-table tbody tr{
+    border-bottom: 1px solid #dddddd;
+
+}
+.content-table tbody tr:nth-of-type(even){
+    background-color: rgb(205, 218, 243);
+}
+.content-table tbody tr:last-of-type{
+    border-bottom: 2px solid rgb(0, 67, 190);
+}
+.lastul{
+    text-align: left;
+    max-width: 900px;
+    justify-content: center;
+    padding-top: 40px;
+}
